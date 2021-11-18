@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ЭлектронныйЖурналКурсовой.Инструменты;
+using ЭлектронныйЖурналКурсовой.Вид.Окна;
+
 
 namespace ЭлектронныйЖурналКурсовой.Вид.Страницы
 {
@@ -27,7 +30,11 @@ namespace ЭлектронныйЖурналКурсовой.Вид.Страни
 
         private void КнопкаАвторизации_Нажать(object sender, RoutedEventArgs e)
         {
-           // NavigationService.
+            ОкноАвторизации окноАвторизации = new ОкноАвторизации();
+            var ТекущееОкно = Window.GetWindow(this);
+            ИнструментыДанных.ТекущийПользователь = null;
+            окноАвторизации.Show();
+            ТекущееОкно.Close();
         }
     }
 }

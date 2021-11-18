@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:ЭлектронныйЖурналКурсовой"
              StartupUri="/Вид/Окна/ОкноАвторизации.xaml">
     <Application.Resources>
+        
         <Style TargetType="Border">
             <Setter Property="CornerRadius" Value="5"/>
         </Style>
