@@ -16,14 +16,14 @@
 
         <StackPanel Grid.Row="0">
             <TextBlock Text="Выберите предмет:"/>
-            <ComboBox x:Name="ПолеСписокПредметов" ItemsSource="{Binding СписокПредметов}"/>
-            <Button x:Name="КнопкаПоказатьОценки" Content="Показать" Click="КнопкаПоказатьОценки_Нажать"/>
+            <ComboBox  x:Name="ПолеСписокПредметов" ItemsSource="{Binding СписокПредметов}"/>
+            <Button    x:Name="КнопкаПоказатьОценки" Content="Показать" Click="КнопкаПоказатьОценки_Нажать"/>
         </StackPanel>
 
-        <DataGrid x:Name="ПанельИнформацииОценки" Grid.Row="1" BorderThickness="1">
+        <DataGrid x:Name="ПанельИнформацииОценки" Grid.Row="1" BorderThickness="1" AutoGenerateColumns="False" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Дата выставления" Binding="{Binding ДатаОценки}"/>
-                <DataGridTextColumn Header="Оценка" Binding="{Binding ДатаОценки}"/>
+                <DataGridTextColumn Header="Дата выставления" Binding="{Binding ДатаОценки}" Width="*"/>
+                <DataGridTextColumn Header="Оценка" Binding="{Binding Оценка}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
 
