@@ -85,6 +85,9 @@
     <Compile Include="Вид\Страницы\СтраницаУченикаПанельОценок.xaml.cs">
       <DependentUpon>СтраницаУченикаПанельОценок.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Вид\Страницы\СтраницаУчителяПанельОценок.xaml.cs">
+      <DependentUpon>СтраницаУчителяПанельОценок.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Данные\sysdiagrams.cs">
       <DependentUpon>МодельДанных.tt</DependentUpon>
     </Compile>
@@ -145,6 +148,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Вид\Страницы\СтраницаУченикаПанельОценок.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Вид\Страницы\СтраницаУчителяПанельОценок.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
