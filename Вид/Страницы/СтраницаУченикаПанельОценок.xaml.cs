@@ -24,5 +24,10 @@ namespace ЭлектронныйЖурналКурсовой.Вид.Страни
         {
             InitializeComponent();
         }
+
+        private void КнопкаПоказатьОценки_Нажать(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
