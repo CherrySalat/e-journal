@@ -1,0 +1,56 @@
+﻿<Window x:Class="ЭлектронныйЖурналКурсовой.Вид.Окна.ОкноАвторизации"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ЭлектронныйЖурналКурсовой.Вид.Окна"
+        mc:Ignorable="d"
+        Title="ОкноАвторизации" Height="450" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+
+
+
+        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Name="НадписьЛогин"  Text="Логин"  Grid.Column="0" Grid.Row="0"  VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                <TextBlock x:Name="НадписьПароль" Text="Пароль" Grid.Column="0" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                <TextBox     x:Name="ПолеЛогин"  Grid.Row="0"  Grid.Column="1"  Background="AliceBlue" Height="10" Width="100" />
+                <PasswordBox x:Name="ПолеПароль" Grid.Row ="1" Grid.Column="1" Height="10" Width="100"/>
+
+
+                <Button    x:Name="КнопкаАвторзоваться"            Content="Войти" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Click="КнопкаАвторизации_Нажать"/>
+                <TextBlock x:Name="НапдписьНеверныйЛогинИлиПароль" Text="Неверный Логин/Пароль"  Grid.Row="2" Grid.ColumnSpan="2" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            </Grid>
+        </Border>
+
+
+
+
+    </Grid>
+</Window>
