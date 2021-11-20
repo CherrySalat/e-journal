@@ -49,28 +49,43 @@ namespace ЭлектронныйЖурналКурсовой.Вид.Страни
             ПолеГруппа.ItemsSource  = СписокГруппПреподователя; 
         }
 
+
+        //Показываем оценки
         private void КнопкаПоказатьОценки_Нажать(object sender, RoutedEventArgs e)
         {
+            if (ПолеПредмет.Text == null || ПолеГруппа.Text == "")
+                MessageBox.Show("Выберете предмет по которому хотите видеть оценку", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
 
-        }
-
-        private void КнопкаСохранитьИзменения_Нажать(object sender, RoutedEventArgs e)
-        {
-
-        }
-    
-        private void КнопкаОтменитьИзминения_Нажать(object sender, RoutedEventArgs e)
-        {
-
+            else
+            {
+                ПанельОценок.ItemsSource = (from оценки in ИнструментыДанных.ЭлектронныйЖурнал.оценки
+                                           join ученики in ИнструментыДанных.ЭлектронныйЖурнал.пользователи
+                                           on оценки.ученик equals ученики.номер
+                                           join предметы in ИнструментыДанных.ЭлектронныйЖурнал.предмет
+                                           on оценки.предмет equals предметы.номер_предмета
+                                           where ученики.группа == ПолеГруппа.Text &&
+                                                  предметы.предмет1 == ПолеПредмет.Text &&
+                                                  предметы.преподователь == ТекущийПользователь.номер &&
+                                                  оценки.дата_получения == ПолеДатаОценки.SelectedDate
+                                           select new {НомерОценки = оценки.номер_оценки, Ученик = ученики.фамилия+ " " + ученики.имя +" " + ученики.отчество, Оценка = оценки.оценка }).ToList();
+            }
         }
 
         private void КнопкаДобавитьОценку_Нажать(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new СтраницаУчителяДобавитьОценку());
         }
 
         private void КнопкаУдалитьОценку_Нажать(object sender, RoutedEventArgs e)
         {
+            //var столбец = ПанельОценок.SelectedItem;
+            //var номерОценки = столбец.НомерОценки;
+        }
+
+        private void КнопкаИзменитьОценку_Нажать(object sender, RoutedEventArgs e)
+        {
+
+
 
         }
     }

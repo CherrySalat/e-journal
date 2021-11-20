@@ -85,8 +85,14 @@
     <Compile Include="Вид\Страницы\СтраницаДляВсехИнформацияОПользователе.xaml.cs">
       <DependentUpon>СтраницаДляВсехИнформацияОПользователе.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Вид\Страницы\СтраницаКлассногоРуководителяПанельУчеников.xaml.cs">
+      <DependentUpon>СтраницаКлассногоРуководителяПанельУчеников.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Вид\Страницы\СтраницаУченикаПанельОценок.xaml.cs">
       <DependentUpon>СтраницаУченикаПанельОценок.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Вид\Страницы\СтраницаУчителяДобавитьОценку.xaml.cs">
+      <DependentUpon>СтраницаУчителяДобавитьОценку.xaml</DependentUpon>
     </Compile>
     <Compile Include="Вид\Страницы\СтраницаУчителяПанельОценок.xaml.cs">
       <DependentUpon>СтраницаУчителяПанельОценок.xaml</DependentUpon>
@@ -150,7 +156,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Вид\Страницы\СтраницаКлассногоРуководителяПанельУчеников.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Вид\Страницы\СтраницаУченикаПанельОценок.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Вид\Страницы\СтраницаУчителяДобавитьОценку.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -194,7 +208,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Citycons_ship_icon-icons.com_67927.ico" />
     <Resource Include="px32.ico" />
     <Content Include="Данные\МодельДанных.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

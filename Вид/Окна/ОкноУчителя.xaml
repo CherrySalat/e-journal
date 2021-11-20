@@ -17,8 +17,8 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Frame x:Name="КадрИнформацияОПользователе" Source="../Страницы/СтраницаДляВсехИнформацияОПользователе.xaml" Background="Bisque" Grid.Column="0" Grid.RowSpan="2"/>
-        <Frame x:Name="КадрЗаголовок" Source="../Страницы/СтраницаДляВсехЗаголовок.xaml" Background="Red" Grid.Column="1" Grid.Row="0"/>
-        <Frame x:Name="КадрРабочаяПанель" Source="../Страницы/СтраницаУчителяПанельОценок.xaml" Background="Blue" Grid.Column="1" Grid.Row="1"/>
+        <Frame x:Name="КадрИнформацияОПользователе" Source="../Страницы/СтраницаДляВсехИнформацияОПользователе.xaml" Grid.Column="0" Grid.RowSpan="2"/>
+        <Frame x:Name="КадрЗаголовок" Source="../Страницы/СтраницаДляВсехЗаголовок.xaml"                             Grid.Column="1" Grid.Row="0"/>
+        <Frame x:Name="КадрРабочаяПанель" Source="../Страницы/СтраницаУчителяПанельОценок.xaml"                      Grid.Column="1" Grid.Row="1"/>
     </Grid>
 </Window>

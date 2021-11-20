@@ -5,14 +5,19 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ЭлектронныйЖурналКурсовой.Вид.Страницы"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      
       Title="СтраницаДляВсехИнформацияОПользователе">
 
-    <StackPanel>
-        <Border Margin="10" BorderBrush="Black" BorderThickness="1">
+    <StackPanel Background="{StaticResource СветлоКоричневый}">
+        <Border Margin="10" BorderBrush="Black" BorderThickness="1" Width="48" Height="64">
             <Image x:Name="ФотоПрофиля" Width="48" Height="64"  Margin="0" ToolTip="Ваше фото" Stretch="Uniform"/>
         </Border>
-        <Button x:Name="КнопкаДобавитьИзображение" Content="Загрузить фото" Width="120" ToolTip="Нажмите что бы " HorizontalAlignment="Center" Click="ЗагрузитьИзображение"/>
+        <Button x:Name="КнопкаДобавитьИзображение" 
+                Content="Загрузить фото"
+                Width="120" 
+                HorizontalAlignment="Center" 
+                Click="ЗагрузитьИзображение" 
+                Background="{StaticResource ТёмноКоричневый}"/>
         <TextBlock x:Name="ФИО" Text="ФИО: " Margin="0,20,0,0"/>
         <TextBlock x:Name="ДатаРождения" Text="Дата рождения: " />
         <TextBlock x:Name="Должность" Text="Должность: " />

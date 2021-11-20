@@ -9,6 +9,18 @@
             <Setter Property="CornerRadius" Value="5"/>
         </Style>
         -->
+
+
+        <SolidColorBrush x:Key="Берюзовый"        Color="#e1f1e7"/>
+        <SolidColorBrush x:Key="ТёмноСиний"       Color="#1b99e3"/>
+        <SolidColorBrush x:Key="ТёмноКоричневый"  Color="#aa8743"/>
+        <SolidColorBrush x:Key="СреднеСиний"      Color="#7bc4e4"/>
+        <SolidColorBrush x:Key="СветлоКоричневый" Color="#d0c598"/>
+        <SolidColorBrush x:Key="СероСиний"        Color="#FFF6F6F6"/>
+        <SolidColorBrush x:Key="Голубой"          Color="#ff64ccf1"/>
+
+
+
         <Style TargetType="Frame">
             <Setter Property="NavigationUIVisibility" Value="Hidden"/>
         </Style>
@@ -18,6 +30,8 @@
             <Setter Property="Width"    Value="80"/>
             <Setter Property="FontSize" Value="15"/>
             <Setter Property="Margin"   Value="5" />
+            <Setter Property="Background" Value="{StaticResource Голубой}"/>
+            <Setter Property="Foreground" Value="White"/>
         </Style>
 
         <Style TargetType="TextBlock">
@@ -31,20 +45,24 @@
             <Setter Property="Height"   Value="23"/>
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="Margin"   Value="3" />
+            <Setter Property="Background" Value="{StaticResource СероСиний}"/>
         </Style>
 
         <Style TargetType="PasswordBox">
             <Setter Property="Height"   Value="23"/>
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="Margin"   Value="3" />
+            <Setter Property="Background" Value="{StaticResource СероСиний}"/>
         </Style>
 
         <Style TargetType="ComboBox">
-            <Setter Property="Margin"   Value="5"/>
-            <Setter Property="Height"   Value="45"/>
+            <Setter Property="Margin"   Value="5"  />
+            <Setter Property="Height"   Value="45" />
             <Setter Property="Width"    Value="120"/>
-            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Background" Value="{StaticResource СероСиний}"/>
         </Style>
-        
+
+
     </Application.Resources>
 </Application>

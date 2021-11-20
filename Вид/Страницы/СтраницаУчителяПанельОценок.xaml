@@ -12,61 +12,45 @@
         <Style TargetType="Button">
             <Setter Property="Height"   Value="80"/>
             <Setter Property="FontSize" Value="18"/>
-            <Setter Property="Margin"   Value="10" />
+            <Setter Property="Margin"   Value="10,0,10,20" />
         </Style>
-        
-        
     </Page.Resources>
-    
-    
+
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.7*"/>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="0.7*"/>
         </Grid.RowDefinitions>
 
-        
-        
-        <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <ComboBox x:Name="ПолеГруппа"  Text="Выберете предмет" />
-            <ComboBox x:Name="ПолеПредмет" Text="Выберете группу"  />
 
-            <Button x:Name="КнопкаПоказатьОценки" Click="КнопкаПоказатьОценки_Нажать" Width="100"  Height="Auto" Margin="9,36,9,35.8" >
-                <TextBlock FontSize="13">
-                    Показать      
-                    <LineBreak/>
-                    Оценку
-                </TextBlock>
-            </Button>
-            
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <ComboBox   x:Name="ПолеГруппа"  Text="Выберете предмет"     />
+            <ComboBox   x:Name="ПолеПредмет" Text="Выберете группу"      />
+            <DatePicker x:Name="ПолеДатаОценки"  SelectedDateFormat="Short" />
+            <Button x:Name="КнопкаПоказатьОценки" Content="Показать" Click="КнопкаПоказатьОценки_Нажать" Width="100"  Height="Auto"/>
+
         </StackPanel>
 
-        <DataGrid x:Name="ПанельОценок" Grid.Row="1">
-            
+        <DataGrid x:Name="ПанельОценок" Grid.Row="1" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Ученик" Binding="{Binding Ученик}" Width="*"/>
+                <DataGridTextColumn Header="Оценка" Binding="{Binding Оценка}" Width="*"/>
+            </DataGrid.Columns>
         </DataGrid>
 
 
         <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
-            <Button x:Name="КнопкаСохранитьИзменения" Click="КнопкаСохранитьИзменения_Нажать">
+            <Button x:Name="КнопкаИзменитьОценку" Click="КнопкаИзменитьОценку_Нажать">
                 <TextBlock>
-                    Сохранить      
+                    Изменить       
                     <LineBreak/>
-                    Изминения
+                    оценку
                 </TextBlock>
             </Button>
 
-            
-            
-            <Button x:Name="КнопкаОтменитьИзминения" Click="КнопкаОтменитьИзминения_Нажать">
-                <TextBlock>
-                    Отменить      
-                    <LineBreak/>
-                    Изминения
-                </TextBlock>
-            </Button>
-
-            
 
             <Button x:Name="КнопкаДобавитьОценку" Click="КнопкаДобавитьОценку_Нажать">
                 <TextBlock>
@@ -86,6 +70,6 @@
                 </TextBlock>
             </Button>
         </StackPanel>
-        
+
     </Grid>
 </Page>
