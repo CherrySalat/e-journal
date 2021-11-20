@@ -14,12 +14,14 @@
             <Setter Property="FontSize" Value="18"/>
             <Setter Property="Margin"   Value="10" />
         </Style>
+        
+        
     </Page.Resources>
     
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="0.7*"/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
@@ -27,11 +29,11 @@
         
         
         <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <ComboBox x:Name="ПолеГруппа"  Text="Выберете предмет" ItemsSource="{Binding СписокПредметовПреподователя}"/>
-            <ComboBox x:Name="ПолеПредмет" Text="Выберете группу"  ItemsSource="{Binding СписокГруппПреподователя}"/>
+            <ComboBox x:Name="ПолеГруппа"  Text="Выберете предмет" />
+            <ComboBox x:Name="ПолеПредмет" Text="Выберете группу"  />
 
-            <Button x:Name="КнопкаПоказатьОценки" Click="КнопкаПоказатьОценки_Нажать" Width="100" >
-                <TextBlock>
+            <Button x:Name="КнопкаПоказатьОценки" Click="КнопкаПоказатьОценки_Нажать" Width="100"  Height="Auto" Margin="9,36,9,35.8" >
+                <TextBlock FontSize="13">
                     Показать      
                     <LineBreak/>
                     Оценку

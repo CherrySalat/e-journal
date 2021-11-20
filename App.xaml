@@ -4,16 +4,18 @@
              xmlns:local="clr-namespace:ЭлектронныйЖурналКурсовой"
              StartupUri="/Вид/Окна/ОкноАвторизации.xaml">
     <Application.Resources>
-        
+        <!--
         <Style TargetType="Border">
             <Setter Property="CornerRadius" Value="5"/>
         </Style>
+        -->
         <Style TargetType="Frame">
             <Setter Property="NavigationUIVisibility" Value="Hidden"/>
         </Style>
 
         <Style TargetType="Button">
-            <Setter Property="Height"   Value="25"/>
+            <Setter Property="Height"   Value="35"/>
+            <Setter Property="Width"    Value="80"/>
             <Setter Property="FontSize" Value="15"/>
             <Setter Property="Margin"   Value="5" />
         </Style>
@@ -27,19 +29,21 @@
 
         <Style TargetType="TextBox">
             <Setter Property="Height"   Value="23"/>
-            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontSize" Value="16"/>
             <Setter Property="Margin"   Value="3" />
         </Style>
 
         <Style TargetType="PasswordBox">
             <Setter Property="Height"   Value="23"/>
-            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontSize" Value="16"/>
             <Setter Property="Margin"   Value="3" />
         </Style>
 
         <Style TargetType="ComboBox">
-            <Setter Property="Margin" Value="5"/>
-            <Setter Property="Height" Value="25"/>
+            <Setter Property="Margin"   Value="5"/>
+            <Setter Property="Height"   Value="45"/>
+            <Setter Property="Width"    Value="120"/>
+            <Setter Property="FontSize" Value="14"/>
         </Style>
         
     </Application.Resources>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ЭлектронныйЖурналКурсовой.Вид.Окна"
         mc:Ignorable="d"
-        Title="ОкноАвторизации" Height="450" Width="800">
+        Title="ОкноАвторизации" Height="450" Width="400" ResizeMode="NoResize">
     <Grid>
 
 
@@ -15,7 +15,7 @@
 
 
 
-        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2" Margin="10" Padding="10" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2" Margin="10" Padding="10" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="5">
             <Grid>
 
                 <Grid.ColumnDefinitions>
@@ -32,11 +32,12 @@
                 <TextBlock x:Name="НадписьПароль" Text="Пароль" Grid.Column="0" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="Right"/>
 
                 <TextBox     x:Name="ПолеЛогин"  Grid.Row="0" Grid.Column="1"  Width="100"/>
-                <PasswordBox x:Name="ПолеПароль" Grid.Row="1" Grid.Column="1"  Width="100"/>
+                <PasswordBox x:Name="ПолеПароль" Grid.Row="1" Grid.Column="1"  Width="100" VerticalAlignment="Center"/>
 
-
-                <Button    x:Name="КнопкаАвторзоваться"            Content="Войти" Grid.Row="2" Grid.ColumnSpan="2" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Click="КнопкаАвторизации_Нажать"/>
-                <TextBlock x:Name="НапдписьНеверныйЛогинИлиПароль" Text="Неверный Логин/Пароль"  Grid.Row="2" Grid.ColumnSpan="2" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
+                    <Button    x:Name="КнопкаАвторзоваться"            Content="Войти"  Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Click="КнопкаАвторизации_Нажать"/>
+                    <TextBlock x:Name="НапдписьНеверныйЛогинИлиПароль" Text="Неверный Логин/Пароль"  Grid.Row="2" Grid.ColumnSpan="2" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                </StackPanel>
             </Grid>
         </Border>
 
