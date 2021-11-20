@@ -14,7 +14,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0">
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
             <TextBlock Text="Выберите предмет:"/>
             <ComboBox  x:Name="ПолеСписокПредметов" ItemsSource="{Binding СписокПредметов}"/>
             <Button    x:Name="КнопкаПоказатьОценки" Content="Показать" Click="КнопкаПоказатьОценки_Нажать"/>

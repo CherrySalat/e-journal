@@ -8,7 +8,82 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="СтраницаУчителяПанельОценок">
 
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height"   Value="80"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin"   Value="10" />
+        </Style>
+    </Page.Resources>
+    
+    
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        
+        
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <ComboBox x:Name="ПолеГруппа"  Text="Выберете предмет" ItemsSource="{Binding СписокПредметовПреподователя}"/>
+            <ComboBox x:Name="ПолеПредмет" Text="Выберете группу"  ItemsSource="{Binding СписокГруппПреподователя}"/>
+
+            <Button x:Name="КнопкаПоказатьОценки" Click="КнопкаПоказатьОценки_Нажать" Width="100" >
+                <TextBlock>
+                    Показать      
+                    <LineBreak/>
+                    Оценку
+                </TextBlock>
+            </Button>
+            
+        </StackPanel>
+
+        <DataGrid x:Name="ПанельОценок" Grid.Row="1">
+            
+        </DataGrid>
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
+            <Button x:Name="КнопкаСохранитьИзменения" Click="КнопкаСохранитьИзменения_Нажать">
+                <TextBlock>
+                    Сохранить      
+                    <LineBreak/>
+                    Изминения
+                </TextBlock>
+            </Button>
+
+            
+            
+            <Button x:Name="КнопкаОтменитьИзминения" Click="КнопкаОтменитьИзминения_Нажать">
+                <TextBlock>
+                    Отменить      
+                    <LineBreak/>
+                    Изминения
+                </TextBlock>
+            </Button>
+
+            
+
+            <Button x:Name="КнопкаДобавитьОценку" Click="КнопкаДобавитьОценку_Нажать">
+                <TextBlock>
+                    Добавить      
+                    <LineBreak/>
+                    Оценку
+                </TextBlock>
+            </Button>
+
+
+
+            <Button x:Name="КнопкаУдалитьОценку" Click="КнопкаУдалитьОценку_Нажать">
+                <TextBlock>
+                    Удалить      
+                    <LineBreak/>
+                    Оценку
+                </TextBlock>
+            </Button>
+        </StackPanel>
         
     </Grid>
 </Page>
