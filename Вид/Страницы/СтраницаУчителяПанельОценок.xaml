@@ -36,6 +36,7 @@
 
         <DataGrid x:Name="ПанельОценок" Grid.Row="1" AutoGenerateColumns="False" >
             <DataGrid.Columns>
+                <DataGridTextColumn Header="Ученик" Binding="{Binding Номер}"  Width="*" Visibility="Hidden"/>
                 <DataGridTextColumn Header="Ученик" Binding="{Binding Ученик}" Width="*"/>
                 <DataGridTextColumn Header="Оценка" Binding="{Binding Оценка}" Width="*"/>
             </DataGrid.Columns>

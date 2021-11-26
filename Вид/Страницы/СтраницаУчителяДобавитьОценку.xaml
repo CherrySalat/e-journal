@@ -8,45 +8,55 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="СтраницаУчителяДобавитьОценку">
 
+    <Page.Resources>
+        <Style TargetType="ComboBox">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        
+    </Page.Resources>
+
     <Grid>
         <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2" Margin="10" Padding="10" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="5">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-
-
-
-                <TextBlock x:Name="НадписьУченик"  Text="Ученик:"  Grid.Column="0" Grid.Row="0"  VerticalAlignment="Center" HorizontalAlignment="Right"/>
-                <TextBlock x:Name="НадписьОценка"  Text="Ваша оценка:" Grid.Column="0" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="Right"/>
-
-                <ComboBox    x:Name="ПолеУченик"  Grid.Row="0" Grid.Column="1"  Width="200" VerticalAlignment="Center" BorderBrush="{x:Null}" Background="#FFF6F6F6"/>
-                <TextBox     x:Name="ПолеОценка"  Grid.Row="0" Grid.Column="1"  Width="100" VerticalAlignment="Center" BorderBrush="{x:Null}" Background="#FFF6F6F6"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
                 
+                
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
 
 
-                <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
+
+            <TextBlock x:Name="НадписьУченик"  Text="Ученик:"      Grid.Row="0" Grid.Column="0"/>
+            <TextBlock x:Name="НадписьОценка"  Text="Ваша оценка:" Grid.Row="1" Grid.Column="0"/>
+
+            <ComboBox  x:Name="ПолеУченик"                         Grid.Row="0" Grid.Column="1"/>
+            <ComboBox  x:Name="ПолеОценка"                         Grid.Row="1" Grid.Column="1"/>
+
+
+
+
+                <StackPanel Grid.Row="3" Grid.ColumnSpan="2">
                     <Button    x:Name="КнопкаВыставитьОценку"
                                Content="Выставить"  Width="80" 
                                HorizontalAlignment="Center"
                                VerticalAlignment="Top" Click="КнопкаВыставитьОценку_Нажать"/>
-                    
+
                 </StackPanel>
+        </Grid>
 
 
 
-
-            </Grid>
         </Border>
-
-
-
     </Grid>
 </Page>
