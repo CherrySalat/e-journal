@@ -27,10 +27,10 @@
 
 
         <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <ComboBox   x:Name="ПолеГруппа"  Text="Выберете предмет"     />
-            <ComboBox   x:Name="ПолеПредмет" Text="Выберете группу"      />
-            <DatePicker x:Name="ПолеДатаОценки"  SelectedDateFormat="Short" />
-            <Button x:Name="КнопкаПоказатьОценки" Content="Показать" Click="КнопкаПоказатьОценки_Нажать" Width="100"  Height="Auto"/>
+            <ComboBox   x:Name="ПолеГруппа"  Text="Выберете предмет"       />
+            <ComboBox   x:Name="ПолеПредмет" Text="Выберете группу"        />
+            <DatePicker x:Name="ПолеДатаОценки"  SelectedDateFormat="Short"/>
+            <Button x:Name="КнопкаПоказатьОценки" Content="Показать" Click="КнопкаПоказатьОценки_Нажать"/>
 
         </StackPanel>
 

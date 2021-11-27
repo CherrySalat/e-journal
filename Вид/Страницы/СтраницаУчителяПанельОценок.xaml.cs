@@ -67,7 +67,7 @@ namespace ЭлектронныйЖурналКурсовой.Вид.Страни
         //Показываем оценки
         private void КнопкаПоказатьОценки_Нажать(object sender, RoutedEventArgs e)
         {
-            if (ПолеПредмет.Text == null || ПолеГруппа.Text == "")
+            if (ПолеПредмет.Text == null || ПолеГруппа.Text == "" || ПолеДатаОценки.SelectedDate == null)
                 MessageBox.Show("Выберете предмет по которому хотите видеть оценку", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
 
             else
@@ -84,9 +84,11 @@ namespace ЭлектронныйЖурналКурсовой.Вид.Страни
 
         private void КнопкаУдалитьОценку_Нажать(object sender, RoutedEventArgs e)
         {
+            if (ПанельОценок.SelectedItems.Count != 1)
+                return;
             dynamic предНомерОценки = ПанельОценок.SelectedCells[0].Item;
             int НомерОценки;
-            _ = int.TryParse(предНомерОценки, out НомерОценки);
+            НомерОценки = (int)предНомерОценки.НомерОценки;
             оценки удаляемаяОценка = ИнструментыДанных.ЭлектронныйЖурнал.оценки.Where(х => х.номер_оценки == НомерОценки).First();
             ИнструментыДанных.ЭлектронныйЖурнал.оценки.Remove(удаляемаяОценка);
             ИнструментыДанных.ЭлектронныйЖурнал.SaveChanges();
@@ -96,9 +98,13 @@ namespace ЭлектронныйЖурналКурсовой.Вид.Страни
 
         private void КнопкаИзменитьОценку_Нажать(object sender, RoutedEventArgs e)
         {
+            if (ПанельОценок.SelectedItems.Count != 1)
+                return;
             dynamic предНомерОценки = ПанельОценок.SelectedCells[0].Item;
-            int НомерОценки;
-            _ = int.TryParse(предНомерОценки, out НомерОценки);
+            int НомерОценки;            
+            НомерОценки = (int)предНомерОценки.НомерОценки;
+            оценки оц = ИнструментыДанных.ЭлектронныйЖурнал.оценки.First();
+            MessageBox.Show(оц.оценка);
             NavigationService.Navigate(new СтраницаУчителяДобавитьОценку(НомерОценки));
         }
     }

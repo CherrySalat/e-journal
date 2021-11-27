@@ -70,6 +70,9 @@
     <Compile Include="Вид\Окна\ОкноАвторизации.xaml.cs">
       <DependentUpon>ОкноАвторизации.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Вид\Окна\ОкноАдминистратора.xaml.cs">
+      <DependentUpon>ОкноАдминистратора.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Вид\Окна\ОкноКлассногоРуководителя.xaml.cs">
       <DependentUpon>ОкноКлассногоРуководителя.xaml</DependentUpon>
     </Compile>
@@ -78,6 +81,18 @@
     </Compile>
     <Compile Include="Вид\Окна\ОкноУчителя.xaml.cs">
       <DependentUpon>ОкноУчителя.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Вид\Страницы\СтраницаДляАдминимтратораДобавитьГруппу.xaml.cs">
+      <DependentUpon>СтраницаДляАдминимтратораДобавитьГруппу.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Вид\Страницы\СтраницаДляАдминимтратораДобавитьПользователя.xaml.cs">
+      <DependentUpon>СтраницаДляАдминимтратораДобавитьПользователя.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Вид\Страницы\СтраницаДляАдминимтратораДобавитьПредмет.xaml.cs">
+      <DependentUpon>СтраницаДляАдминимтратораДобавитьПредмет.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Вид\Страницы\СтраницаДляАдминимтратораОсновнаяПанель.xaml.cs">
+      <DependentUpon>СтраницаДляАдминимтратораОсновнаяПанель.xaml</DependentUpon>
     </Compile>
     <Compile Include="Вид\Страницы\СтраницаДляВсехЗаголовок.xaml.cs">
       <DependentUpon>СтраницаДляВсехЗаголовок.xaml</DependentUpon>
@@ -136,6 +151,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Вид\Окна\ОкноАдминистратора.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Вид\Окна\ОкноКлассногоРуководителя.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -145,6 +164,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Вид\Окна\ОкноУчителя.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Вид\Страницы\СтраницаДляАдминимтратораДобавитьГруппу.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Вид\Страницы\СтраницаДляАдминимтратораДобавитьПользователя.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Вид\Страницы\СтраницаДляАдминимтратораДобавитьПредмет.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Вид\Страницы\СтраницаДляАдминимтратораОсновнаяПанель.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

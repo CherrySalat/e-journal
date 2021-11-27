@@ -81,7 +81,7 @@
         </Style>
 
         <Style TargetType="Page">
-            <Setter Property="Background" Value="{StaticResource СероСиний}"/>
+            <Setter Property="Background" Value="{StaticResource Берюзовый}"/>
         </Style>
 
 

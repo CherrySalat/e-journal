@@ -7,70 +7,39 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800" 
       Title="СтраницаКлассногоРуководителяПанельУчеников">
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height"   Value="80"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin"   Value="10,0,10,20" />
+        </Style>
+    </Page.Resources>
+
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.7*"/>
             <RowDefinition/>
-            <RowDefinition Height="0.7*"/>
         </Grid.RowDefinitions>
 
 
 
         <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <ComboBox x:Name="ПолеГруппа"  Text="Выберете предмет" />
-            <ComboBox x:Name="ПолеПредмет" Text="Выберете группу"  />
-
-            <Button x:Name="КнопкаПоказатьОценки" Content=" Показать"  Width="100"  Height="30" />
+            <ComboBox   x:Name="ПолеПредмет"  Text="Выберете предмет"       />
+            
+            <DatePicker x:Name="ПолеДатаОценки"  SelectedDateFormat="Short"/>
+            <Button x:Name="КнопкаПоказатьОценки" Content="Показать" Click="КнопкаПоказатьОценки_Нажать"/>
 
         </StackPanel>
 
         <DataGrid x:Name="ПанельОценок" Grid.Row="1" AutoGenerateColumns="False" >
             <DataGrid.Columns>
-                
+                <DataGridTextColumn Header="Ученик" Binding="{Binding Номер}"  Width="*" Visibility="Hidden"/>
+                <DataGridTextColumn Header="Ученик" Binding="{Binding Ученик}" Width="*"/>
+                <DataGridTextColumn Header="Оценка" Binding="{Binding Оценка}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
 
-
-        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
-            <Button x:Name="КнопкаСохранитьИзменения" >
-                <TextBlock>
-                    Сохранить      
-                    <LineBreak/>
-                    Изминения
-                </TextBlock>
-            </Button>
-
-
-
-            <Button x:Name="КнопкаОтменитьИзминения">
-                <TextBlock>
-                    Отменить      
-                    <LineBreak/>
-                    Изминения
-                </TextBlock>
-            </Button>
-
-
-
-            <Button x:Name="КнопкаДобавитьОценку" >
-                <TextBlock>
-                    Добавить      
-                    <LineBreak/>
-                    Оценку
-                </TextBlock>
-            </Button>
-
-
-
-            <Button x:Name="КнопкаУдалитьОценку">
-                <TextBlock>
-                    Удалить      
-                    <LineBreak/>
-                    Оценку
-                </TextBlock>
-            </Button>
-        </StackPanel>
 
     </Grid>
 </Page>
