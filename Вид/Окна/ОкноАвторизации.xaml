@@ -21,15 +21,11 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                
-                
                 <TextBlock x:Name="НадписьЛогин"  Text="Логин"  Grid.Column="0" Grid.Row="0"  VerticalAlignment="Center" HorizontalAlignment="Right"/>
                 <TextBlock x:Name="НадписьПароль" Text="Пароль" Grid.Column="0" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="Right"/>
 
                 <TextBox     x:Name="ПолеЛогин"  Grid.Row="0" Grid.Column="1"  Width="100" VerticalAlignment="Center" BorderBrush="{x:Null}" />
                 <PasswordBox x:Name="ПолеПароль" Grid.Row="1" Grid.Column="1"  Width="100" VerticalAlignment="Center" BorderBrush="{x:Null}" />
-
-                
                 
                 <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
                     <Button    x:Name="КнопкаАвторзоваться"            Content="Войти"  Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Click="КнопкаАвторизации_Нажать" Background="#ff64ccf1" Foreground="White"/>
