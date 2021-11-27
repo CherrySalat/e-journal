@@ -5,10 +5,77 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ЭлектронныйЖурналКурсовой.Вид.Страницы"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+     
       Title="СтраницаДляАдминимтратораДобавитьПользователя">
 
     <Grid>
-        
+        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2" Margin="10" Padding="10" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="5">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+
+
+
+                
+                <TextBlock Text="Имя:"              Grid.Row="0" Grid.Column="0"/>
+                <TextBlock Text="Фамилия:"          Grid.Row="1" Grid.Column="0"/>
+                <TextBlock Text="Отчество:"         Grid.Row="2" Grid.Column="0"/>
+                <TextBlock Text="Должность:"        Grid.Row="3" Grid.Column="0"/>
+                <TextBlock Text="Дата рождения:"    Grid.Row="4" Grid.Column="0"/>
+                <TextBlock Text="Группа:"           Grid.Row="5" Grid.Column="0"/>
+                <TextBlock Text="Логин:"            Grid.Row="6" Grid.Column="0"/>
+                <TextBlock Text="Пароль:"           Grid.Row="7" Grid.Column="0"/>
+                <TextBlock Text="Повторить пароль:" Grid.Row="8" Grid.Column="0"/>
+                
+                <TextBox    x:Name="ПолеИмя"             Grid.Row="0" Grid.Column="1"/>
+                <TextBox    x:Name="ПолеФамилия"         Grid.Row="1" Grid.Column="1"/>
+                <TextBox    x:Name="ПолеОтчество"        Grid.Row="2" Grid.Column="1"/>
+                <ComboBox   x:Name="ПолеДолжность"       Grid.Row="3" Grid.Column="1"/>
+                <DatePicker x:Name="ПолеДатаОценки"      Grid.Row="4" Grid.Column="1" SelectedDateFormat="Short"/>
+                <ComboBox   x:Name="ПолеГруппа"          Grid.Row="5" Grid.Column="1" MinWidth="100"/>
+                <TextBox    x:Name="ПолеЛогин"           Grid.Row="6" Grid.Column="1"/>
+                <TextBox    x:Name="ПолеПароль"          Grid.Row="7" Grid.Column="1"/>
+                <TextBox    x:Name="ПолеПарольПовторить" Grid.Row="8" Grid.Column="1"/>
+                
+                
+               
+                <StackPanel Grid.Row="9" Grid.ColumnSpan="2">
+                    <Button    x:Name="КнопкаСоздатьГруппу"
+                               Content="Выставить"  Width="80" 
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Top" Click="КнопкаСоздатьГруппу_Нажать"/>
+
+                    <Button   x:Name="КнопкаОтмена"
+                              Content="Отмена" Width="80"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Top" Click="КнопкаОтмена_Нажать"/>
+
+                </StackPanel>
+            </Grid>
+
+
+
+        </Border>
     </Grid>
 </Page>

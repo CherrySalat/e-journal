@@ -24,5 +24,15 @@ namespace ЭлектронныйЖурналКурсовой.Вид.Страни
         {
             InitializeComponent();
         }
+
+        private void КнопкаОтмена_Нажать(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void КнопкаСоздатьГруппу_Нажать(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

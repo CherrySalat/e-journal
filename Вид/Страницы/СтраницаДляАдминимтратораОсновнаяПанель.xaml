@@ -8,6 +8,20 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="СтраницаДляАдминимтратораОсновнаяПанель">
 
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height"   Value="80"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin"   Value="10,0,10,20" />
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+    </Page.Resources>
+
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -22,21 +36,23 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            
+            
             <Button x:Name="КнопкаДобавитьПользователя" Click="КнопкаДобавитьПользователя_Нажать">
                 <TextBlock>
-                    Изменить       
+                    Добавить      
                     <LineBreak/>
-                    оценку
+                    Пользователя
                 </TextBlock>
             </Button>
 
 
             <Button x:Name="КнопкаУдалитьПользователя" Click="КнопкаУдалитьПользователя_Нажать">
                 <TextBlock>
-                    Добавить      
+                    Удалить      
                     <LineBreak/>
-                    Оценку
+                    Пользователя
                 </TextBlock>
             </Button>
 
@@ -44,9 +60,9 @@
 
             <Button x:Name="КнопкаДобавитьГруппу" Click="КнопкаДобавитьГруппу_Нажать">
                 <TextBlock>
-                    Удалить      
+                    Добавить      
                     <LineBreak/>
-                    Оценку
+                    Группу
                 </TextBlock>
             </Button>
 
@@ -54,9 +70,27 @@
                 <TextBlock>
                     Удалить      
                     <LineBreak/>
-                    Оценку
+                    Группу
                 </TextBlock>
             </Button>
+
+            <Button x:Name="КнопкаДобавитьПредмет" Click="КнопкаДобавитьПредмет_Нажать">
+                <TextBlock>
+                    Добавить        
+                    <LineBreak/>
+                    Предмет
+                </TextBlock>
+            </Button>
+
+            <Button x:Name="КнопкаУдалитьПредмет" Click="КнопкаУдалитьПредмет_Нажать">
+                <TextBlock>
+                    Удалить      
+                    <LineBreak/>
+                    Предмет
+                </TextBlock>
+            </Button>
+                
+     
         </StackPanel>
 
 

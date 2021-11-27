@@ -9,6 +9,53 @@
       Title="СтраницаДляАдминимтратораДобавитьПредмет">
 
     <Grid>
-        
+        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2" Margin="10" Padding="10" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="5">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+
+
+
+                <TextBlock Text="Предмет:" Grid.Row="0" Grid.Column="0"/>
+                <TextBlock Text="Группа:" Grid.Row="1" Grid.Column="0"/>
+                <TextBlock Text="Преподователь:" Grid.Row="2" Grid.Column="0"/>
+              
+                
+                <TextBox   x:Name="ПолеПредмет"   Grid.Row="0" Grid.Column="1" MinWidth="100"/>
+                <ComboBox  x:Name="ПолеГруппа"    Grid.Row="1" Grid.Column="1" MinWidth="100"/>
+                <ComboBox  x:Name="Преподаватель" Grid.Row="2" Grid.Column="1"/>
+
+
+
+
+                <StackPanel Grid.Row="3" Grid.ColumnSpan="2">
+                    <Button    x:Name="КнопкаСоздатьПредмет"
+                               Content="Выставить"  Width="80" 
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Top" Click="КнопкаСоздатьПредмет_Нажать"/>
+
+                    <Button   x:Name="КнопкаОтмена"
+                              Content="Отмена" Width="80"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Top" Click="КнопкаОтмена_Нажать"/>
+
+                </StackPanel>
+            </Grid>
+
+
+
+        </Border>
     </Grid>
 </Page>

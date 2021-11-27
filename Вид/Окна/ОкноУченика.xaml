@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ЭлектронныйЖурналКурсовой.Вид.Окна"
         mc:Ignorable="d"
-        Title="ОкноУченика" Height="450" Width="800">
+        Title="ОкноУченика" Height="900" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
@@ -21,7 +21,7 @@
         
         <Frame x:Name="КадрИнформацияОПользователе" Source="../Страницы/СтраницаДляВсехИнформацияОПользователе.xaml" Grid.Column="0" Grid.RowSpan="2"/>
         <Frame x:Name="КадрЗаголовок" Source="../Страницы/СтраницаДляВсехЗаголовок.xaml" Grid.Column="1" Grid.Row="0"/>
-        <Frame x:Name="КадрРабочаяПанель" Source="../Страницы/СтраницаУченикаПанельОценок.xaml"  Grid.Column="1" Grid.Row="1"/>
+        <Frame x:Name="КадрРабочаяПанель" Source="../Страницы/СтраницаУченикаПанельОценок.xaml" Background="{StaticResource Берюзовый}"  Grid.Column="1" Grid.Row="1"/>
 
     </Grid>
 </Window>

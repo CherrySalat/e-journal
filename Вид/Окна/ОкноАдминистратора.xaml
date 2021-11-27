@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ЭлектронныйЖурналКурсовой.Вид.Окна"
         mc:Ignorable="d"
-        Title="Окно администратора" Height="650" Width="1200">
+        Title="Окно администратора" Height="900" Width="1200">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
@@ -19,6 +19,6 @@
 
         <Frame x:Name="КадрИнформацияОПользователе" Source="../Страницы/СтраницаДляВсехИнформацияОПользователе.xaml" Grid.Column="0" Grid.RowSpan="2"/>
         <Frame x:Name="КадрЗаголовок" Source="../Страницы/СтраницаДляВсехЗаголовок.xaml"                             Grid.Column="1" Grid.Row="0"/>
-        <Frame x:Name="КадрРабочаяПанель" Source="../Страницы/СтраницаУчителяПанельОценок.xaml"                      Grid.Column="1" Grid.Row="1"/>
+        <Frame x:Name="КадрРабочаяПанель" Source="../Страницы/СтраницаУчителяПанельОценок.xaml"      Background="{StaticResource Берюзовый}"                Grid.Column="1" Grid.Row="1"/>
     </Grid>
 </Window>
