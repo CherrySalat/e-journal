@@ -8,7 +8,7 @@
       
       Title="СтраницаДляВсехИнформацияОПользователе">
 
-    <StackPanel Background="{StaticResource СветлоКоричневый}">
+    <StackPanel Background="{StaticResource СреднеСиний }">
         <Border Margin="10" BorderBrush="Black" BorderThickness="1" Width="48" Height="64">
             <Image x:Name="ФотоПрофиля" Width="48" Height="64"  Margin="0" ToolTip="Ваше фото" Stretch="Uniform"/>
         </Border>

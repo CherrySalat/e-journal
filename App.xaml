@@ -32,6 +32,22 @@
             <Setter Property="Margin"   Value="5" />
             <Setter Property="Background" Value="{StaticResource Голубой}"/>
             <Setter Property="Foreground" Value="White"/>
+
+            
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="5"
+                                Background="{TemplateBinding Background}">
+
+                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+           
+
         </Style>
 
         <Style TargetType="TextBlock">
@@ -64,6 +80,13 @@
             <Setter Property="BorderBrush" Value =   "{x:Null}"/>
         </Style>
 
+        <Style TargetType="Page">
+            <Setter Property="Background" Value="{StaticResource СероСиний}"/>
+        </Style>
+
+
+        
+        
 
     </Application.Resources>
 </Application>

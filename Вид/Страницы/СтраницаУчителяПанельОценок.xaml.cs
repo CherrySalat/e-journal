@@ -78,8 +78,8 @@ namespace ЭлектронныйЖурналКурсовой.Вид.Страни
 
         private void КнопкаДобавитьОценку_Нажать(object sender, RoutedEventArgs e)
         {
-            if(ПолеПредмет.Text == "" || ПолеГруппа.Text == "")
-            NavigationService.Navigate(new СтраницаУчителяДобавитьОценку(ПолеГруппа.Text,ПолеПредмет.Text));
+            if(ПолеПредмет.Text != "" && ПолеГруппа.Text != "" && ПолеПредмет.Text != null && ПолеГруппа.Text != null)
+            NavigationService.Navigate(new СтраницаУчителяДобавитьОценку(ПолеГруппа.Text,ПолеПредмет.Text,DateTime.Now.ToString()));
         }
 
         private void КнопкаУдалитьОценку_Нажать(object sender, RoutedEventArgs e)

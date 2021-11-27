@@ -5,11 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ЭлектронныйЖурналКурсовой.Вид.Страницы"
       mc:Ignorable="d" 
-      d:DesignHeight="120" d:DesignWidth="800"
-      Title="СтраницаДляВсехЗаголовок" Background="Aquamarine">
+      
+      Title="СтраницаДляВсехЗаголовок" Background="{StaticResource ТёмноСиний}">
 
     <Grid>
-        <TextBlock Text="Электронный дневник" HorizontalAlignment="Center"/>
-        <Button x:Name="КнопкаВыйти" Content="Выйти" Width="auto" Height="30" ToolTip="Нажмите что-бы выйти к окну авторизации" HorizontalAlignment="Right" Click="КнопкаАвторизации_Нажать"/>
+        <TextBlock Text="Электронный дневник" HorizontalAlignment="Center" FontSize="24" Foreground="White"/>
+        <Button x:Name="КнопкаВыйти" Content="Выйти" Width="auto" Height="40" ToolTip="Нажмите что-бы выйти к окну авторизации" HorizontalAlignment="Right" Click="КнопкаАвторизации_Нажать"/>
     </Grid>
 </Page>
