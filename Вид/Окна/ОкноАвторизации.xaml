@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ЭлектронныйЖурналКурсовой.Вид.Окна"
         mc:Ignorable="d"
-        Title="ОкноАвторизации" Height="450" Width="400" ResizeMode="NoResize">
+        Title="Авторизация" Height="450" Width="400" ResizeMode="NoResize">
 
 
     <Grid Background="{StaticResource Берюзовый}">

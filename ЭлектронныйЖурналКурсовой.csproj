@@ -103,6 +103,9 @@
     <Compile Include="Вид\Страницы\СтраницаКлассногоРуководителяПанельУчеников.xaml.cs">
       <DependentUpon>СтраницаКлассногоРуководителяПанельУчеников.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Вид\Страницы\СтраницаУченикаПанельИтоговыхОценок.xaml.cs">
+      <DependentUpon>СтраницаУченикаПанельИтоговыхОценок.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Вид\Страницы\СтраницаУченикаПанельОценок.xaml.cs">
       <DependentUpon>СтраницаУченикаПанельОценок.xaml</DependentUpon>
     </Compile>
@@ -192,6 +195,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Вид\Страницы\СтраницаКлассногоРуководителяПанельУчеников.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Вид\Страницы\СтраницаУченикаПанельИтоговыхОценок.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

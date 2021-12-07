@@ -14,7 +14,7 @@
         </Border>
         <Button x:Name="КнопкаДобавитьИзображение" 
                 Content="Загрузить фото"
-                Width="120" 
+                Width="auto" 
                 HorizontalAlignment="Center" 
                 Click="ЗагрузитьИзображение" 
                 Background="{StaticResource ТёмноКоричневый}"/>
