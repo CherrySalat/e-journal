@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ЭлектронныйЖурналКурсовой.Вид.Окна"
         mc:Ignorable="d"
-        Title="ОкноКлассногоРуководителя" Height="900" Width="800">
+        Title="ЯКлассный руководитель" Height="900" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>

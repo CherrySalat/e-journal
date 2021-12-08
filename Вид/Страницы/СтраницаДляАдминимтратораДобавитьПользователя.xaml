@@ -52,7 +52,7 @@
                 <TextBox    x:Name="ПолеФамилия"         Grid.Row="1" Grid.Column="1"/>
                 <TextBox    x:Name="ПолеОтчество"        Grid.Row="2" Grid.Column="1"/>
                 <ComboBox   x:Name="ПолеДолжность"       Grid.Row="3" Grid.Column="1"/>
-                <DatePicker x:Name="ПолеДатаОценки"      Grid.Row="4" Grid.Column="1" SelectedDateFormat="Short"/>
+                <DatePicker x:Name="ПолеДатаРождения"      Grid.Row="4" Grid.Column="1" SelectedDateFormat="Short"/>
                 <ComboBox   x:Name="ПолеГруппа"          Grid.Row="5" Grid.Column="1" MinWidth="100"/>
                 <TextBox    x:Name="ПолеЛогин"           Grid.Row="6" Grid.Column="1"/>
                 <TextBox    x:Name="ПолеПароль"          Grid.Row="7" Grid.Column="1"/>

@@ -10,7 +10,7 @@
 
     <StackPanel Background="{StaticResource СреднеСиний }">
         <Border Margin="10" BorderBrush="Black" BorderThickness="1" Width="144" Height="144">
-            <Image x:Name="ФотоПрофиля" Width="48" Height="64"  Margin="0" ToolTip="Ваше фото" Stretch="Uniform"/>
+            <Image x:Name="ФотоПрофиля" Width="144" Height="144"  Margin="0" ToolTip="Ваше фото" Stretch="Uniform"/>
         </Border>
         <Button x:Name="КнопкаДобавитьИзображение" 
                 Content="Загрузить фото"

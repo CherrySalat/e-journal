@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+using ЭлектронныйЖурналКурсовой.Данные;
+using ЭлектронныйЖурналКурсовой.Инструменты;
 
 namespace ЭлектронныйЖурналКурсовой.Вид.Страницы
 {
@@ -20,19 +13,43 @@ namespace ЭлектронныйЖурналКурсовой.Вид.Страни
     /// </summary>
     public partial class СтраницаДляАдминимтратораДобавитьГруппу : Page
     {
+        List<string> списокПреподователей = (
+            from учитель in ИнструментыДанных.ЭлектронныйЖурнал.пользователи
+            join группа in ИнструментыДанных.ЭлектронныйЖурнал.учебная_группа
+            on учитель.номер equals группа.руководитель_группы
+            select учитель.фамилия + " " + учитель.имя + " " + учитель.отчество
+            ).ToList();
+
         public СтраницаДляАдминимтратораДобавитьГруппу()
         {
             InitializeComponent();
+            ПолеКлассныйРуководитель.ItemsSource = списокПреподователей;
         }
 
         private void КнопкаСоздатьГруппу_Нажать(object sender, RoutedEventArgs e)
         {
+            if(ПолеГруппа.Text == "" || ПолеКлассныйРуководитель.Text == "")
+            {
+                MessageBox.Show("Не все поля заполнены", "Осторожно", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            учебная_группа группа = new учебная_группа();
+            группа.номер_группы = ПолеГруппа.Text;
+            string имяПреподователя,фамилияПреподователя, отчествоПреподователя;
+            var массивФИО = ПолеКлассныйРуководитель.Text.Split(' ');
+            имяПреподователя = массивФИО[0];
+            фамилияПреподователя = массивФИО[1];
+            отчествоПреподователя = массивФИО[2];
+            группа.руководитель_группы = ИнструментыДанных.ЭлектронныйЖурнал.пользователи
+                .Where(х => х.имя == имяПреподователя && х.отчество == отчествоПреподователя && х.фамилия == фамилияПреподователя)
+                .Select(х=> х.номер)
+                .First();
 
         }
 
         private void КнопкаОтмена_Нажать(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new СтраницаДляАдминимтратораОсновнаяПанель());
         }
     }
 }

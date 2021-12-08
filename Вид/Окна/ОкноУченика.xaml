@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ЭлектронныйЖурналКурсовой.Вид.Окна"
         mc:Ignorable="d"
-        Title="ОкноУченика" Height="900" Width="800">
+        Title="ЯУченик" Height="900" Width="1200">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>

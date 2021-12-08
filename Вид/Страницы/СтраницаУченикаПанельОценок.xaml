@@ -18,6 +18,7 @@
             <TextBlock Text="Выберите предмет:"/>
             <ComboBox  x:Name="ПолеСписокПредметов" ItemsSource="{Binding СписокПредметов}"/>
             <Button    x:Name="КнопкаПоказатьОценки" Content="Показать" Click="КнопкаПоказатьОценки_Нажать" Width="auto"/>
+            <Button    x:Name="КнопкаПоказатьИтоговыеОценки" Content="Показать итоговые оценки" Padding="5" Click="КнопкаПоказатьИтоговыеОценки_Нажать" Width="auto"/>
         </StackPanel>
 
         <DataGrid x:Name="ПанельИнформацииОценки" Grid.Row="1" BorderThickness="1" AutoGenerateColumns="False" >

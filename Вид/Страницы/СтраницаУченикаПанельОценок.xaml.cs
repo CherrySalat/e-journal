@@ -1,21 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using ЭлектронныйЖурналКурсовой.Инструменты;
 using ЭлектронныйЖурналКурсовой.Данные;
-
-
 namespace ЭлектронныйЖурналКурсовой.Вид.Страницы
 {
     /// <summary>
@@ -52,6 +41,11 @@ namespace ЭлектронныйЖурналКурсовой.Вид.Страни
                                                                                          .Select(х => new { ДатаОценки = х.дата_получения.ToString(), Оценка = х.оценка })
                                                                                          .ToList();
             
-        }     
+        }
+
+        private void КнопкаПоказатьИтоговыеОценки_Нажать(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new СтраницаУченикаПанельИтоговыхОценок());
+        }
     }
 }

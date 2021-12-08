@@ -27,7 +27,7 @@
 
 
 
-                <TextBlock x:Name="НадписьГруппа"  Text="Группы:"      Grid.Row="0" Grid.Column="0"/>
+                <TextBlock x:Name="НадписьГруппа"  Text="Группа:"      Grid.Row="0" Grid.Column="0"/>
                 <TextBlock x:Name="НадписьКлассныйРуководитель"  Text="Классный руководитель:" Grid.Row="1" Grid.Column="0"/>
 
                 <TextBox   x:Name="ПолеГруппа"                         Grid.Row="0" Grid.Column="1" MinWidth="100"/>
