@@ -9,7 +9,7 @@
       Title="СтраницаДляАдминимтратораДобавитьПользователя">
 
     <Grid>
-        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2" Margin="10" Padding="10" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="5">
+        <Border Grid.Row="1" Grid.Column="1"  BorderBrush="Black" BorderThickness="2" Margin="10" Padding="10" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="5" Height="auto">
             <Grid>
 
                 <Grid.ColumnDefinitions>
@@ -52,7 +52,7 @@
                 <TextBox    x:Name="ПолеФамилия"         Grid.Row="1" Grid.Column="1"/>
                 <TextBox    x:Name="ПолеОтчество"        Grid.Row="2" Grid.Column="1"/>
                 <ComboBox   x:Name="ПолеДолжность"       Grid.Row="3" Grid.Column="1"/>
-                <DatePicker x:Name="ПолеДатаРождения"      Grid.Row="4" Grid.Column="1" SelectedDateFormat="Short"/>
+                <DatePicker x:Name="ПолеДатаРождения"    Grid.Row="4" Grid.Column="1" SelectedDateFormat="Short"/>
                 <ComboBox   x:Name="ПолеГруппа"          Grid.Row="5" Grid.Column="1" MinWidth="100"/>
                 <TextBox    x:Name="ПолеЛогин"           Grid.Row="6" Grid.Column="1"/>
                 <TextBox    x:Name="ПолеПароль"          Grid.Row="7" Grid.Column="1"/>
@@ -60,16 +60,17 @@
                 
                 
                
-                <StackPanel Grid.Row="9" Grid.ColumnSpan="2">
+                <StackPanel Grid.Row="9" Grid.ColumnSpan="2" Orientation ="Horizontal">
                     <Button    x:Name="КнопкаСоздатьГруппу"
                                Content="Выставить"  Width="80" 
                                HorizontalAlignment="Center"
                                VerticalAlignment="Top" Click="КнопкаСоздатьГруппу_Нажать"/>
 
                     <Button   x:Name="КнопкаОтмена"
-                              Content="Отмена" Width="80"
-                              HorizontalAlignment="Center"
+                              Content="Отмена" Width="80" Height="30"
+                              HorizontalAlignment="Center" Margin="10"
                               VerticalAlignment="Top" Click="КнопкаОтмена_Нажать"/>
+                    
 
                 </StackPanel>
             </Grid>

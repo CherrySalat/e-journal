@@ -23,7 +23,6 @@ namespace ЭлектронныйЖурналКурсовой.Вид.Страни
         private          string       группа;
 
         private bool     режимИзминения = false;
-        private int      номерОценки;
         private string[] ученикФИО;
         
 
@@ -46,7 +45,7 @@ namespace ЭлектронныйЖурналКурсовой.Вид.Страни
                                              
                                       select
                                           ученики.фамилия + " " + ученики.имя + " " + ученики.отчество
-                                      ).ToList();
+                                      ).Distinct().ToList();
 
 
             ПолеОценка.ItemsSource = оценки;

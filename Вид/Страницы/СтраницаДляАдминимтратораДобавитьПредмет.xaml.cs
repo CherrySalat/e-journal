@@ -27,12 +27,12 @@ namespace ЭлектронныйЖурналКурсовой.Вид.Страни
 
         private void КнопкаСоздатьПредмет_Нажать(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new СтраницаДляАдминимтратораОсновнаяПанель());
         }
 
         private void КнопкаОтмена_Нажать(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new СтраницаДляАдминимтратораОсновнаяПанель());
         }
     }
 }

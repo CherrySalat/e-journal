@@ -23,7 +23,7 @@
 
         <DataGrid x:Name="ПанельИнформацииОценки" Grid.Row="1" BorderThickness="1" AutoGenerateColumns="False" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Дата выставления" Binding="{Binding ДатаОценки}" Width="*"/>
+                <DataGridTextColumn Header="Дата выставления" Binding="{Binding Предмет}" Width="*"/>
                 <DataGridTextColumn Header="Оценка"           Binding="{Binding Оценка}"     Width="*"/>
             </DataGrid.Columns>
         </DataGrid>

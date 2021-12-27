@@ -4,8 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ЭлектронныйЖурналКурсовой.Вид.Страницы"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      mc:Ignorable="d"   
       Title="СтраницаДляАдминимтратораОсновнаяПанель">
 
 
@@ -19,81 +18,106 @@
         <Style TargetType="TextBlock">
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
+
+        <Style TargetType="DataGrid">
+            <Setter Property="Width"  Value="350"/>
+            <Setter Property="Margin" Value="10"  />
+        </Style>
     </Page.Resources>
 
-
-    <Grid>
+        <Grid>
+        
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="0.3*"/>
         </Grid.RowDefinitions>
 
+        <StackPanel Orientation="Horizontal"  Grid.Row="0" HorizontalAlignment="Center">
+            <StackPanel>
+                <TextBlock Text="Пользователи:"/>
+                <DataGrid x:Name="ПанельПользователей"  BorderThickness="1" AutoGenerateColumns="False" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn                       Binding="{Binding Номер}"  Visibility="Hidden"/>
+                        <DataGridTextColumn Header="Пользователь" Binding="{Binding ФИО}"    Width="*"/>
+                        <DataGridTextColumn Header="Роль"         Binding="{Binding Роль}"   Width="*"/>
+                        <DataGridTextColumn Header="Группа"       Binding="{Binding Группа}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
 
-        <DataGrid x:Name="ПанельИнформацииОценки" Grid.Row="0" BorderThickness="1" AutoGenerateColumns="False" >
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Дата выставления" Binding="{Binding ДатаОценки}" Width="*"/>
-                <DataGridTextColumn Header="Оценка"           Binding="{Binding Оценка}"     Width="*"/>
-            </DataGrid.Columns>
-        </DataGrid>
+            <StackPanel>
+                <TextBlock Text="Группы:"/>
+                <DataGrid x:Name="ПанельГрупп" BorderThickness="1" AutoGenerateColumns="False" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Группа"       Binding="{Binding номер_группы}"        Width="*"/>
+                        <DataGridTextColumn Header="Руководитель" Binding="{Binding руководитель_группы}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+            
+            <StackPanel>
+                <TextBlock Text="Предметы:"/>
+                <DataGrid x:Name="ПанельПредметов" BorderThickness="1" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Номер}" Visibility="Hidden"/>
+                        <DataGridTextColumn Header="Предмет"          Binding="{Binding предмет}" Width="*"/>
+                        <DataGridTextColumn Header="Преподователь"    Binding="{Binding преподователь}" Width="*"/>
+                        <DataGridTextColumn Header="Группа"           Binding="{Binding группа}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </StackPanel>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            
-            
-            <Button x:Name="КнопкаДобавитьПользователя" Click="КнопкаДобавитьПользователя_Нажать">
-                <TextBlock>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="КнопкаДобавитьПользователя" Click="КнопкаДобавитьПользователя_Нажать">
+                    <TextBlock>
                     Добавить      
                     <LineBreak/>
                     Пользователя
-                </TextBlock>
-            </Button>
+                    </TextBlock>
+                </Button>
 
-
-            <Button x:Name="КнопкаУдалитьПользователя" Click="КнопкаУдалитьПользователя_Нажать">
-                <TextBlock>
+                <Button x:Name="КнопкаУдалитьПользователя" Click="КнопкаУдалитьПользователя_Нажать">
+                    <TextBlock>
                     Удалить      
                     <LineBreak/>
                     Пользователя
-                </TextBlock>
-            </Button>
+                    </TextBlock>
+                </Button>
 
-
-
-            <Button x:Name="КнопкаДобавитьГруппу" Click="КнопкаДобавитьГруппу_Нажать">
-                <TextBlock>
+                <Button x:Name="КнопкаДобавитьГруппу" Click="КнопкаДобавитьГруппу_Нажать">
+                    <TextBlock>
                     Добавить      
                     <LineBreak/>
                     Группу
-                </TextBlock>
-            </Button>
+                    </TextBlock>
+                </Button>
 
-            <Button x:Name="КнопкаУдалитьГруппу" Click="КнопкаУдалитьГруппу_Нажать">
-                <TextBlock>
+                <Button x:Name="КнопкаУдалитьГруппу" Click="КнопкаУдалитьГруппу_Нажать">
+                    <TextBlock>
                     Удалить      
                     <LineBreak/>
                     Группу
-                </TextBlock>
-            </Button>
+                    </TextBlock>
+                </Button>
 
-            <Button x:Name="КнопкаДобавитьПредмет" Click="КнопкаДобавитьПредмет_Нажать">
-                <TextBlock>
+                <Button x:Name="КнопкаДобавитьПредмет" Click="КнопкаДобавитьПредмет_Нажать">
+                    <TextBlock>
                     Добавить        
                     <LineBreak/>
                     Предмет
-                </TextBlock>
-            </Button>
+                    </TextBlock>
+                </Button>
 
-            <Button x:Name="КнопкаУдалитьПредмет" Click="КнопкаУдалитьПредмет_Нажать">
-                <TextBlock>
+                <Button x:Name="КнопкаУдалитьПредмет" Click="КнопкаУдалитьПредмет_Нажать">
+                    <TextBlock>
                     Удалить      
                     <LineBreak/>
                     Предмет
-                </TextBlock>
-            </Button>
-                
-     
-        </StackPanel>
+                    </TextBlock>
+                </Button>
+            </StackPanel>
+        </Grid>
+    
 
-
-
-    </Grid>
 </Page>

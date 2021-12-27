@@ -62,10 +62,9 @@ namespace ЭлектронныйЖурналКурсовой.Вид.Страни
             if (ПолеПредмет.Text == null || ПолеГруппа.Text == "" || ПолеДатаОценки.SelectedDate == null)
                 MessageBox.Show("Выберете предмет по которому хотите видеть оценку", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
 
-            else
-            {
+            else         
                 УстановитьИсточник();
-            }
+            
         }
 
         private void КнопкаДобавитьОценку_Нажать(object sender, RoutedEventArgs e)
